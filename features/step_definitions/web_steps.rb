@@ -110,6 +110,14 @@ Then /^(?:|I )should see "([^"]*)"$/ do |text|
   end
 end
 
+Then /^(?:|I )should see a title of "([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_title(text)
+  else
+    assert page.has_title?(text)
+  end
+end
+
 Then /^(?:|I )should see \/([^\/]*)\/$/ do |regexp|
   regexp = Regexp.new(regexp)
 
