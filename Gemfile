@@ -22,6 +22,7 @@ end
 
 gem 'jquery-rails'
 gem 'dynamic_form'
+gem 'devise', '~> 1.4.3'
 
 group :test, :development do 
 	gem 'rspec-rails', '~> 2.5'
